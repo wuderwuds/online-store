@@ -1,0 +1,10 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color:  rgb(254, 229, 77, 0.3);
+  }
+  .lioff {
+    display: none;
+  }
