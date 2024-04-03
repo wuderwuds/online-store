@@ -41,9 +41,13 @@ export const Home =() => {
     else {as = 'ий'}
     
         return  (
+            <>
+            {len &&
             <div className={styles.wrapper} > 
                 <h1>Добро пожаловать в интренет магазин продуктов для животных! <br></br><p className={token ? '' : styles.lioff}>На данный момент в асортименте {len} позиц{as}.</p>
                 </h1>
             </div>
+            }
+            </>
         )
 }
