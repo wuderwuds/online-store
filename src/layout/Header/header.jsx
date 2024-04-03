@@ -1,10 +1,12 @@
 import styles from './header.module.css'
 import header_logo from '../../pictures/header_logo.jpg'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { Search } from '../../components/Search/search'
 
 export const Header = () => {
 const navigate = useNavigate();
+const {pathname} = useLocation()
 const {token} = useSelector(state=>state.user);
 
 return (
@@ -16,6 +18,7 @@ return (
     src={header_logo}     
     alt='logo'
     />
+    {pathname=== '/products' && <Search/>}
     <div className={styles.headerMenu}>
         <i className="fa-regular fa-heart fa-lg m-1" ></i>
         <i className="fa-solid fa-bag-shopping fa-lg m-3"></i>

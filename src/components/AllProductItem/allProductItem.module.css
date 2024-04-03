@@ -1,0 +1,32 @@
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-end;
+    border: none;
+    cursor: pointer;
+    width: 240px;
+    height: 366px;
+    margin:auto;
+}
+.pet_pictures {
+    width: 240px;
+    height: 220px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.pet_name {
+    height: auto;
+}
+.pet_name1 {
+    font-size: 1vw;
+}
+    

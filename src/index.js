@@ -10,6 +10,7 @@ import { Home } from './pages/Home/home';
 import { SignIn } from './pages/SignIn/signIn';
 import { SignUp } from './pages/SignUp/signUp';
 import { CardUserInfo } from './pages/CardUserInfo/cardUserInfo';
+import { Products } from './pages/AllProduct/allProduct';
 
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
@@ -33,8 +34,12 @@ const router = createBrowserRouter([
       {
         path: 'signup',
         element: <SignUp/>
+      },
+      {
+        path: 'products',
+        element: <Products/>
       }    
-    ],
+    ]
   }
 ]);
 
