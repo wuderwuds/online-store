@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux';
 import { setUpUser } from '../../redux/slices/userSlice';
 import { FormRegAuth } from '../../components/Forms/formRegAuth';
 import { useNoAuth } from '../../hooks/useNoAuth';
+import { Zoom, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 export const SignIn = () => {
 
@@ -57,7 +59,17 @@ export const SignIn = () => {
             return navigate('/products');
         }; 
         
-        return alert(responce.message);
+        return toast.warn(responce.message, {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Zoom,
+            });
     };
 
     return (

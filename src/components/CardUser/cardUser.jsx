@@ -1,11 +1,16 @@
-import { NavLink, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import styles from './cardUser.module.css'
 import { useDispatch } from 'react-redux'
 import { cleanUser } from '../../redux/slices/userSlice'
+import { useAuth } from '../../hooks/useAuth'
 export const CardUser = ({cardUser}) =>{
-   const dispatch = useDispatch()
-   const navigate = useNavigate()
-
+   useAuth();
+   const dispatch = useDispatch();
+   const navigate = useNavigate();
+   const fnExit = () => {
+    dispatch(cleanUser());
+    navigate('/signin');
+   };
    return(
     
     <div className={styles.st}>
@@ -26,13 +31,13 @@ export const CardUser = ({cardUser}) =>{
                 type="button"  
                 className="btn btn-warning"> Закрыть
                 </button>
-                <NavLink to='/'> 
-                    <button 
-                    onClick={()=>dispatch(cleanUser())}
-                    type="button"  
-                    className="m-2 btn btn-warning"> Выйти
-                    </button> 
-                </NavLink>
+                
+                <button 
+                onClick={()=>fnExit()}
+                type="button"  
+                className="m-2 btn btn-warning"> Выйти
+                </button> 
+                
             </div>
         </div> 
     </div>
