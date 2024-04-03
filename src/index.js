@@ -11,13 +11,13 @@ import { SignIn } from './pages/SignIn/signIn';
 import { SignUp } from './pages/SignUp/signUp';
 import { CardUserInfo } from './pages/CardUserInfo/cardUserInfo';
 import { Products } from './pages/AllProduct/allProduct';
+import { PageProduct } from './pages/CurrentProduct/currentProduct';
 
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout/>,
-    
     children: [
       {
         index: 'true',
@@ -38,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: 'products',
         element: <Products/>
+      },    
+      {
+        path: 'products/:idOfProd',
+        element: <PageProduct/>
       }    
     ]
   }

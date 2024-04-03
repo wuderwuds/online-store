@@ -13,7 +13,7 @@ export const FormRegAuth = ({validationSchema, onSubmit, initialValues, typeForm
                 <ErrorMessage component={'p'} name='email'/>
                 
                 <label htmlFor="password">Password</label>
-                <Field id="password" name="password" placeholder="password" type='text' />
+                <Field id="password" name="password" placeholder="password" type='password' />
                 <ErrorMessage component={'p'} name='password'/>
                 
                 <button className="btn btn-success mt-1" type="submit">Войти</button>

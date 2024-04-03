@@ -1,0 +1,14 @@
+.st {
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+ width: 16rem;
+ 
+}
+.lioff {
+    display: none;
+}
+.discont {
+    text-decoration: line-through;
+}
