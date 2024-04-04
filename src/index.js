@@ -12,6 +12,7 @@ import { SignUp } from './pages/SignUp/signUp';
 import { CardUserInfo } from './pages/CardUserInfo/cardUserInfo';
 import { Products } from './pages/AllProduct/allProduct';
 import { PageProduct } from './pages/CurrentProduct/currentProduct';
+import { Cart } from './pages/Cart/cart';
 
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: 'products/:idOfProd',
         element: <PageProduct/>
+      },
+      {
+        path: 'cart',
+        element: <Cart/>
       }    
     ]
   }

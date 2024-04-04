@@ -3,12 +3,14 @@ import { getInitState } from "./initialData";
 import { userReducer } from "./slices/userSlice";
 import { filterReducer } from "./slices/filterSlice";
 import { quantityReducer } from "./slices/quantitySlice";
+import { cartReducer } from "./slices/cartSlace";
 
 export const store = configureStore({
     reducer: {
      user: userReducer,
      filter: filterReducer,
-     quantity: quantityReducer
+     quantity: quantityReducer,
+     cart: cartReducer
     },
     preloadedState: getInitState(),
 });

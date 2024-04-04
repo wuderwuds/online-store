@@ -9,7 +9,7 @@ const userSlice = createSlice({
             return action.payload
         },
         cleanUser() {
-            localStorage.removeItem('reduxState');
+            localStorage.removeItem('reduxState')
             return myInitialData.user;
         }
     }

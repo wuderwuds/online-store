@@ -3,7 +3,8 @@ export const myInitialData = {
     filter:{
         search: "" 
     },
-    quantity: {}
+    quantity: {},
+    cart: []
 }
 
 export const getInitState = () => {

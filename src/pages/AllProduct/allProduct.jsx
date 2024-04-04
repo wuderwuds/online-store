@@ -10,7 +10,7 @@ export const Products = () => {
     const search = useSelector(state=>state.filter.search);
 
     const {data: pets, isError, error, isLoading} = useQuery({
-        queryKey: ['getProducts', search],
+        queryKey: ['getProducts', token, search],
         queryFn: async () => {
             try {
                 const res = await fetch(`https://api.react-learning.ru/products/search?query=${search}`, {
@@ -28,7 +28,7 @@ export const Products = () => {
             } catch (error) {
                 return alert(error)
             }
-        }
+        },
     })
     
     if (isError) return <p>Произошла ошибка: {error}</p>
