@@ -9,12 +9,11 @@ export const Layout = () => {
     return (
         <>
         <div className={styles.wrapper}>
-        <Header/>
-        <div className={styles.wrapper1}>
-        <Outlet/> 
-        </div>
-        <Footer/>
-        
+            <Header/>
+            <div className={styles.wrapper1}>
+                <Outlet/> 
+            </div>
+            <Footer/>
         </div>
         <ToastContainer limit={1}/>
         </>

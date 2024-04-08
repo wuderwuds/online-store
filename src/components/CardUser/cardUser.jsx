@@ -1,15 +1,20 @@
 import { useNavigate } from 'react-router-dom'
 import styles from './cardUser.module.css'
 import { useDispatch } from 'react-redux'
-import { cleanUser } from '../../redux/slices/userSlice'
+
 import { useAuth } from '../../hooks/useAuth'
+import { cleanUser } from '../../redux/slices/userSlice'
+
 export const CardUser = ({cardUser}) =>{
    useAuth();
    const dispatch = useDispatch();
    const navigate = useNavigate();
-   const fnExit = () => {
-    dispatch(cleanUser());
+   
+      const fnExit = () => {
     navigate('/signin');
+    dispatch(cleanUser());
+    localStorage.clear()   ;
+    window.location.reload();
    };
    return(
     
@@ -37,6 +42,7 @@ export const CardUser = ({cardUser}) =>{
                 type="button"  
                 className="m-2 btn btn-warning"> Выйти
                 </button> 
+                
                 
             </div>
         </div> 

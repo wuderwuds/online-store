@@ -16,12 +16,6 @@ export const SignIn = () => {
                   .email('Некорректный email')
                   .required('Введите email'),
         password: Yup.string()
-                    //  .matches(RegExp("(.*[a-z].*)"), "")
-                    //  .matches(RegExp("(.*[A-Z].*)"), "Как минимум одна заглавная буква")
-                    //  .matches(RegExp("(.*\\d.*)"), "Как минимум одна цифра")
-                    //  .matches(RegExp('[!@#$%^&*(),.?":{}|<>]'), "Как минимум один спец. символ")
-                    //  .min(6, 'длина пароля не менее 6')
-                    //  .max(20, 'длина пароля не более 20')
                      .required('Введите пароль')
         });
     
@@ -54,6 +48,17 @@ export const SignIn = () => {
         const res = await mutateAsync(values);
         const responce = await res.json();
         if (res.ok) {
+            toast.success('Вы успешно авторизировались', {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Zoom,
+                })
             dispatch(setUpUser({token: responce.token, ...responce.data}));
 
             return navigate('/products');

@@ -3,10 +3,11 @@ export const myInitialData = {
     filter:{
         search: "" 
     },
-    quantity: {}
+    cart: [],
+    
 }
 
 export const getInitState = () => {
-    const lc_store = localStorage.getItem('reduxState');
-    return lc_store ? JSON.parse(lc_store) : myInitialData;
+    const lc_store = localStorage.getItem('reduxStateX');
+    return lc_store ? JSON.parse(lc_store): myInitialData;
   };

@@ -1,9 +1,10 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
 }
 .wrapper1 {
     overflow-y: auto;
-    margin-bottom: 107px;
+    min-height: calc(100vh - 230px);
+
 }
