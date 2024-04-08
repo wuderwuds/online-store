@@ -1,11 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { useAuth } from "../../hooks/useAuth";
-import { useDispatch, useSelector } from "react-redux";
-import { setUpQuantity } from "../../redux/slices/quantitySlice";
+import { useSelector } from "react-redux";
 import { ProductList } from "../../components/ProductList/productList";
 
 export const Products = () => {
-    const dispatch = useDispatch();
     const {token} = useAuth();
     const search = useSelector(state=>state.filter.search);
 
@@ -20,7 +18,6 @@ export const Products = () => {
                 }); 
                 const responce = await res.json();
                 if (res.status===200) {
-                    dispatch(setUpQuantity(responce.length))
                     return responce;
                 }
  

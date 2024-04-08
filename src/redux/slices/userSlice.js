@@ -9,8 +9,8 @@ const userSlice = createSlice({
             return action.payload
         },
         cleanUser() {
-            localStorage.removeItem('reduxState')
-            return myInitialData.user;
+           localStorage.removeItem('reduxStateX')
+           return myInitialData.user  
         }
     }
 })

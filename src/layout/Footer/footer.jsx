@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import styles from './footer.module.css'
 
+
 export const Footer = () => {
+
     return(
         <footer>
             <div className={styles.footer__container}>
