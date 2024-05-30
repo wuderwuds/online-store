@@ -13,7 +13,7 @@ export const Products = () => {
             try {
                 const res = await fetch(`https://api.react-learning.ru/products/search?query=${search}`, {
                     headers: {
-                    Authorization: 'Bearer ' + token
+                    Authorization: 'Bearer ' + token, 
                     }
                 }); 
                 const responce = await res.json();

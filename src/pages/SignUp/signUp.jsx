@@ -40,7 +40,7 @@ export const SignUp = () => {
             const res = await fetch('https://api.react-learning.ru/signup', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(values)
         }) 
@@ -50,8 +50,11 @@ export const SignUp = () => {
     });
 
     const onSubmit = async (values) => {
+        console.log(1111);
         const res = await mutateAsync(values)
+        console.log(res)
         const responce = await res.json()
+        console.log(responce);
         if (res.ok) {
             return navigate('/signin')
         } alert(responce.message)

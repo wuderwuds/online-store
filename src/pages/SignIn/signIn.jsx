@@ -36,7 +36,7 @@ export const SignIn = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
-                },
+                 },
                 body: JSON.stringify(values)
                 }) 
             
@@ -46,7 +46,9 @@ export const SignIn = () => {
 
     const onSubmit = async (values) => {
         const res = await mutateAsync(values);
+        console.log(res);
         const responce = await res.json();
+        console.log(responce);
         if (res.ok) {
             toast.success('Вы успешно авторизировались', {
                 position: "top-center",
