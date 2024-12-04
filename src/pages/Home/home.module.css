@@ -1,0 +1,10 @@
+.wrapper {
+    min-height: calc(100vh - 230px); /*230 сумма высот футер хэдер*/
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color:  rgb(254, 229, 77, 0.3);
+  }
+.lioff {
+    display: none;
+}
